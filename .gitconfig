@@ -121,10 +121,27 @@
 	changed = green
 	untracked = cyan
 
-[diff]
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
+[diff]
+	tool = Kaleidoscope
 	# Detect copies as well as renames
 	renames = copies
+
+[difftool]
+	prompt = false
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+[mergetool]
+	prompt = false
+	keepBackup = true
+
+[merge]
+	tool = Kaleidoscope
 
 [help]
 
@@ -141,9 +158,12 @@
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+	default = simple
 
 # URL shorthands
+
+[url "https://"]
+	insteadOf = git://
 
 [url "git@github.com:"]
 
