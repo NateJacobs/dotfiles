@@ -1,3 +1,6 @@
+# PEAR in MAMP
+alias mpear="/Applications/MAMP/bin/php/php5.6.1/bin/pear"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -7,10 +10,11 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Repos"
+alias st="cd ~/Sites"
 alias g="git"
 alias h="history"
 alias j="jobs"
