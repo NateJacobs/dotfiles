@@ -19,6 +19,14 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 
+# Vagrant
+alias vt="vagrant"
+alias vup="vagrant up"
+alias vd="vagrant destroy"
+alias vp="vagrant provision"
+alias vs="vagrant ssh"
+alias vh="vagrant halt"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
