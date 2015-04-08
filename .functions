@@ -1,3 +1,8 @@
+# Trigger AnyBar menu color change
+function anybar { 
+	echo -n $1 | nc -4u -w0 localhost ${2:-1738}; 
+}
+
 # Return definition of each http command
 function http(){
     curl http://httpcode.info/$1;
